@@ -9,7 +9,9 @@
     height: 350vh;
     display: flex;
     flex-direction: column;
-    /* overflow-x: hidden; */
+    scroll-snap-type: y mandatory ;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .head{
     width: 100%;
@@ -63,6 +65,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    scroll-snap-align: end ;
 }
 .title{
     width: 100%;
@@ -90,6 +93,7 @@
     height: 100vh;
     background-image: linear-gradient(180deg , skyblue , rgb(179, 130, 37));
     background-size: auto;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,7 +159,34 @@
 
 /* gallery */
 
-
+.projects-title{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: rgb(212, 144, 17);
+}
+.projects-title::before{
+    content: '';
+    width: 25vw;
+    height: 2px;
+    border-top: 2px solid rgb(193, 123, 32);
+    border-bottom: 2px solid rgb(193, 123, 32);
+    position: relative;
+    right: 10px;
+}
+.projects-title::after{
+    content: '';
+    width: 25vw;
+    height: 3px;
+    border-top: 2px solid rgb(193, 123, 32);
+    border-bottom: 2px solid rgb(193, 123, 32);
+    position: relative;
+    left: 10px;
+}
 .projects{
     width: 100vw;
     height: 100vh;
@@ -163,6 +194,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    scroll-snap-align: end ;
 }
 .projects-container{
     width: 80vw;
@@ -241,9 +273,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    scroll-snap-align: start ;
 }
-.foo-right , .foo-left{
-    width: 50vw;
+.foo-right , .foo-left , .foo-mid{
+    width: 33vw;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -261,8 +294,31 @@
     
 }
 .contact-icon{
-    width: 50px;
+    width: 40px;
+    height: 40px;
     margin: 10px;
+    
+}
+.contact-icon1{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/542/542638.png);
+    background-size: contain;
+}
+.contact-icon1:hover{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/2669/2669912.png);
+}
+.contact-icon2{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/3059/3059407.png);
+    background-size: contain;
+}
+.contact-icon2:hover{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/1062/1062678.png);
+}
+.contact-icon3{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/1304/1304167.png);
+    background-size: contain;
+}
+.contact-icon3:hover{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/4542/4542152.png);
 }
 .contact-link{
     text-decoration: none;
@@ -271,4 +327,30 @@
 .foo-logo{
     width: 20vw;
     margin-right: 8vw;
+}
+.social{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+.social-icon1{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/160/160168.png);
+    background-size: contain;
+}
+.social-icon1:hover{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/2671/2671797.png);
+}
+.social-icon2{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/1236/1236842.png);
+    background-size: contain;
+}
+.social-icon2:hover{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/1997/1997928.png);
+}
+.social-icon3{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/408/408809.png);
+    background-size: contain;
+}
+.social-icon3:hover{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/8307/8307477.png);
 }
