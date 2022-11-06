@@ -130,18 +130,42 @@
     border-radius: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     cursor: pointer;
     border: none;
+    background-color: rgb(239, 198, 124);
 }
 .burger{
-    width: 20px;
-    height: 4px;
-    border: 2px solid black;
+    border-radius: 3px;
+    height: 5px;
+    border: 2px solid rgb(59, 128, 17);
     margin: 2px;
 }
-
+.burger1{
+    width: 10px;
+    transform: translate(-10px);
+}
+.burger2{
+    width: 20px;
+    transform: translate(-10px);
+}
+.burger3{
+    width: 30px;
+    transform: translate(-10px);
+}
+.menu:hover .burger1{
+    background-color: greenyellow;
+    border-color: greenyellow;
+}
+.menu:hover .burger2{
+    background-color: greenyellow;
+    border-color: greenyellow;
+}
+.menu:hover .burger3{
+    background-color: greenyellow;
+    border-color: greenyellow;
+}
 @media (max-width: 1200px){
     .item-name{
         display: none;
@@ -275,12 +299,7 @@
     margin: 20px;
 }
 
-@media (max-width: 1000px) {
-    .about-img {
-        width: 35vw;
-        transition-duration: 500ms;
-    }
-}
+
 
 /* projects gallery */
 
@@ -482,4 +501,70 @@
 }
 .social-icon3:hover {
     background-image: url("https://cdn-icons-png.flaticon.com/512/8307/8307477.png");
+}
+
+
+@media (max-width: 1000px) {
+    .about-img {
+        width: 35vw;
+        transition-duration: 500ms;
+    }
+}
+@media (max-width: 330px){
+    .container{
+        height: fit-content;
+    }
+    .about-body{
+        flex-direction: column;
+        
+    }
+    .about-img{
+        width: 50%;
+        height: 50%;
+        margin: 0 0 10px 0;
+        object-fit: cover;
+    }
+    .projects-container{
+        width: 100vw;
+        height: 150vh;
+        flex-direction: column;
+    }
+    .projects-title{
+        height: 25vh;
+    }
+    .projects-title::after{
+        width: 10vw;
+    }
+    .projects-title::before{
+        width: 10vw;
+    }
+    .projects-wrapper{
+        width: 100vw;
+        min-width: 100vw;
+        height: 50vh;
+        min-height: 50vh;
+    }
+    .left-btn , .right-btn{
+        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    }
+    .footer-gallery{
+        height: 35vh;
+        margin-bottom: 20px;
+    }
+    .foo-right{
+        display: none;
+
+    }
+    .foo{
+        background-image: url(./logo/AlphaLimitCompanyLogo.png);
+        background-size: cover;
+        align-items: flex-start;
+        
+    }
+    .foo-mid{
+        justify-content: flex-start;
+    }
+    .menu{
+        position: sticky;
+    }
 }
