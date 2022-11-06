@@ -1,3 +1,4 @@
+
 const imgsLinks = [
     {
         image: "https://images.unsplash.com/photo-1658844709274-f733f5da778c?ixlib=rb-1.2.1&ix",
@@ -102,15 +103,68 @@ right.addEventListener("click",() => {
 })
 
 
-//trying to change the main img with the img that have the mouse on
+// const homeIcon = document.getElementById('home-icon');
 
-const imgList = document.getElementsByClassName("footer-img");
-//console.log(imgList)
+// homeIcon.addEventListener('mouseenter',()=>{homeIcon.src = './icons/house.png'});
+// homeIcon.addEventListener('mouseleave',()=>{homeIcon.src = './icons/homeFirst.png'})
 
-//imgList[Math.floor(imgList.length /2)].focus();
-
-// imgList.forEach((el) => {
-//     el.addEventListener("mouseover",() => {
-//         console.log(el);
-//     })
-// })
+$(document).ready(function(){
+    let menuState = false;
+    $('#menu').click(()=>{
+        menuState = !menuState;
+        if(menuState){
+        $('#home-item').animate({
+            right: 90,
+            top: 10
+        });
+        $('#about-item').animate({
+            right: 60,
+            top: 65
+        });
+        $('#projects-item').animate({
+            right: 120,
+            top: 65
+        });
+        $('#products-item').animate({
+            right: 160,
+            top: 10
+        });
+        $('#catalog-item').animate({
+            right: 220,
+            top: 10
+        });
+        $('#contacts-item').animate({
+            right: 190,
+            top: 65
+        });
+        }
+        if(!menuState){
+            $('#home-item').animate({
+                right: 0,
+                top: 45
+            });
+            $('#about-item').animate({
+                right: 0,
+                top: 45
+            });
+            $('#projects-item').animate({
+                right: 0,
+                top: 45
+            });
+            $('#products-item').animate({
+                right: 0,
+                top: 45
+            });
+            $('#catalog-item').animate({
+                right: 0,
+                top: 45
+            });
+            $('#contacts-item').animate({
+                right: 0,
+                top: 45
+            });  
+        }
+        
+    })
+  
+  }); 

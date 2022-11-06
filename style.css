@@ -1,85 +1,207 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     /* overflow-x: hidden; */
 }
-.container{
+.container {
     width: 100vw;
     height: 350vh;
     display: flex;
     flex-direction: column;
-    scroll-snap-type: y mandatory ;
+    scroll-snap-type: y mandatory;
     overflow-y: scroll;
     overflow-x: hidden;
 }
-.head{
+.head {
     width: 100%;
     height: 150px;
     display: flex;
     flex-direction: row;
     position: absolute;
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.logo{
+.logo {
     width: 130px;
-    margin: 10px 0px 10px 20px;
+    margin: 10px 0 10px 20px;
     height: fit-content;
 }
-.nav-list{
-    width: 80%;
+.nav-list {
+    width: 85%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
-}
-.nav-item{
     list-style: none;
-    margin: 0 15px 0 15px;
 
 }
-.link{
+.nav-item {
+    width: fit-content;
+    height: 60px;
+    /* border: 2px solid black; */
+    margin: 0 15px;
+    border-radius: 50px;
+    background-color: transparent;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+}
+
+.link {
     text-decoration: none;
-    color: rgb(236, 154, 4);
+    color: rgb(143, 96, 9);
     font-size: 1.3rem;
     text-transform: capitalize;
     text-shadow: 3px 3px 3px rgb(158, 155, 155);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
 }
-.link:hover{
+.link:hover {
     font-size: 1.4rem;
-    color: rgb(123, 85, 13);
+    color: rgb(84, 58, 10);
 }
+
+.item-icon {
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    min-height: 50px;
+    margin: 5px 10px 5px 5px;
+    border-radius: 50%;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(204, 162, 84);
+}
+.item-name {
+    margin: 0 10px 0 0;
+}
+.home-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/2413/2413074.png");
+}
+.home-item:hover .home-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1018/1018573.png");
+}
+.about-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/7772/7772499.png");
+}
+.about-item:hover .about-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/7610/7610960.png");
+}
+.projects-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/2532/2532924.png");
+}
+.projects-item:hover .projects-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/3187/3187308.png");
+}
+.products-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/679/679720.png");
+}
+.products-item:hover .products-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1045/1045018.png");
+}
+.catalog-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/2557/2557521.png");
+    background-size: 35px;
+}
+.catalog-item:hover .catalog-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/3456/3456391.png");
+}
+.contacts-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/2967/2967883.png");
+    background-size: 35px;
+}
+.contacts-item:hover .contacts-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/2343/2343723.png");
+}
+.nav-btn-el{
+    position: absolute;
+    display: none;
+}
+.menu{
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    min-height: 50px;
+    margin: 5px 10px 5px 5px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+}
+.burger{
+    width: 20px;
+    height: 4px;
+    border: 2px solid black;
+    margin: 2px;
+}
+
+@media (max-width: 1200px){
+    .item-name{
+        display: none;
+    }
+    .nav-item{
+        box-shadow: none;
+        margin: 0px;
+    }
+    
+}
+@media (max-width: 600px){
+    .item-name{
+        display: none;
+    }
+    .nav-item{
+        position: absolute;
+        right: 0px;
+    }
+    .nav-btn-el{
+        display: initial;
+        z-index: 1;
+        
+    }
+    
+}
+
 /* main */
-.main{
+.main {
     width: 100vw;
     height: 300vh;
 
 }
-.bkgrd-wrapper{
+
+/* first section */
+
+.bkgrd-wrapper {
     width: 100vw;
     height: 100vh;
-    background-image: url(https://images.unsplash.com/photo-1543489816-c87b0f5f7dd4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-image: url("https://images.unsplash.com/photo-1543489816-c87b0f5f7dd4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
     background-size: cover;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    scroll-snap-align: end ;
+    scroll-snap-align: end;
 }
-.title{
+.title {
     width: 100%;
     height: auto;
-    text-align:center ;
+    text-align: center;
     font-size: 5rem;
     color: rgb(222, 199, 165);
     text-shadow: 5px 8px 5px gray;
     text-transform: capitalize;
     position: relative;
     top: 10%;
-    
+
 }
-.description{
+.description {
     color: rgb(142, 119, 77);
     font-size: 6vw;
     width: 100%;
@@ -88,7 +210,10 @@
     position: relative;
     top: 10%;
 }
-.about{
+
+/* about section */
+
+.about {
     width: 100vw;
     height: 100vh;
     background-image: linear-gradient(180deg , skyblue , rgb(179, 130, 37));
@@ -98,7 +223,7 @@
     flex-direction: column;
     align-items: center;
 }
-.about-title{
+.about-title {
     width: 100vw;
     height: 20%;
     display: flex;
@@ -106,9 +231,9 @@
     justify-content: center;
     font-size: 2rem;
     text-transform: capitalize;
-    
+
 }
-.about-title::before{
+.about-title::before {
     content: '';
     width: 25vw;
     height: 2px;
@@ -119,7 +244,7 @@
     right: 10px;
 
 }
-.about-title::after{
+.about-title::after {
     content: '';
     width: 25vw;
     height: 2px;
@@ -129,7 +254,7 @@
     bottom: 10px;
     left: 10px;
 }
-.about-body{
+.about-body {
     width: 100%;
     height: 85%;
     display: flex;
@@ -137,29 +262,29 @@
     flex-direction: row;
 
 }
-.about-img{
+.about-img {
     margin-right: 10vw;
     width: 20vw;
     border-radius: 15px;
-    
+
 }
-.about-text{
+.about-text {
     text-align: center;
     color: rgb(59, 59, 59);
     font-size: 1.2rem;
     margin: 20px;
 }
 
-@media (max-width: 1000px){
-    .about-img{
+@media (max-width: 1000px) {
+    .about-img {
         width: 35vw;
         transition-duration: 500ms;
     }
 }
 
-/* gallery */
+/* projects gallery */
 
-.projects-title{
+.projects-title {
     width: 100%;
     height: 15vh;
     display: flex;
@@ -169,7 +294,7 @@
     font-size: 1.5rem;
     color: rgb(212, 144, 17);
 }
-.projects-title::before{
+.projects-title::before {
     content: '';
     width: 25vw;
     height: 2px;
@@ -178,7 +303,7 @@
     position: relative;
     right: 10px;
 }
-.projects-title::after{
+.projects-title::after {
     content: '';
     width: 25vw;
     height: 3px;
@@ -187,23 +312,23 @@
     position: relative;
     left: 10px;
 }
-.projects{
+.projects {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    scroll-snap-align: end ;
+    scroll-snap-align: end;
 }
-.projects-container{
+.projects-container {
     width: 80vw;
     height: 60vh;
     display: flex;
     flex-direction: row;
-    
+
 }
-.projects-wrapper{
+.projects-wrapper {
     width: 380px;
     height: 100%;
     display: flex;
@@ -211,7 +336,8 @@
     padding: 0;
     background-color: black;
 }
-.left-btn,.right-btn{
+.left-btn,
+.right-btn {
     width: 20px;
     height: 50px;
     /* background-color: white; */
@@ -220,29 +346,30 @@
     justify-content: center;
     cursor: pointer;
 }
-.left-btn:hover,.right-btn:hover{
+.left-btn:hover,
+.right-btn:hover {
     box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
 }
-.imgs{
+.imgs {
     height: 90%;
     width: 100%;
     margin: 0;
     color: white;
 }
-#mainImg{
+#mainImg {
     width: 100%;
     height: 100%;
 }
-.product-name{
+.product-name {
     width: 100%;
     font-size: 2rem;
     margin: 10px;
 }
-.decription{
+.decription {
     font-size: 1.2rem;
     margin: 10px;
 }
-.footer-gallery{
+.footer-gallery {
     width: 90vw;
     height: 20vh;
     display: flex;
@@ -252,30 +379,32 @@
     overflow: hidden;
     margin-top: 10px;
 }
-.footer-img{
+.footer-img {
     height: 100%;
     width: 100px;
     object-fit: cover;
     border-radius: 10px;
     /* border: 1px solid black; */
 }
-.btn-icon{
+.btn-icon {
     width: 25px;
-    
+
 }
 
 /* footer */
 
-.foo{
+.foo {
     height: 50vh;
     width: 100vw;
     background-color: antiquewhite;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    scroll-snap-align: start ;
+    scroll-snap-align: start;
 }
-.foo-right , .foo-left , .foo-mid{
+.foo-left,
+.foo-mid,
+.foo-right {
     width: 33vw;
     height: 100%;
     display: flex;
@@ -283,74 +412,74 @@
     align-items: center;
     justify-content: center;
 }
-.foo-right{
+.foo-right {
     align-items: flex-end;
 }
-.contact{
+.contact {
     width: 100%;
     height: max-content;
     display: flex;
     align-items: center;
-    
+
 }
-.contact-icon{
+.contact-icon {
     width: 40px;
     height: 40px;
     margin: 10px;
-    
+
 }
-.contact-icon1{
-    background-image: url(https://cdn-icons-png.flaticon.com/512/542/542638.png);
+.contact-icon1 {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/542/542638.png");
     background-size: contain;
 }
-.contact-icon1:hover{
-    background-image: url(https://cdn-icons-png.flaticon.com/512/2669/2669912.png);
+.contact-icon1:hover {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/2669/2669912.png");
 }
-.contact-icon2{
-    background-image: url(https://cdn-icons-png.flaticon.com/512/3059/3059407.png);
+.contact-icon2 {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/3059/3059407.png");
     background-size: contain;
 }
-.contact-icon2:hover{
-    background-image: url(https://cdn-icons-png.flaticon.com/512/1062/1062678.png);
+.contact-icon2:hover {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1062/1062678.png");
 }
-.contact-icon3{
-    background-image: url(https://cdn-icons-png.flaticon.com/512/1304/1304167.png);
+.contact-icon3 {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1304/1304167.png");
     background-size: contain;
 }
-.contact-icon3:hover{
-    background-image: url(https://cdn-icons-png.flaticon.com/512/4542/4542152.png);
+.contact-icon3:hover {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/4542/4542152.png");
 }
-.contact-link{
+.contact-link {
     text-decoration: none;
     color: green;
 }
-.foo-logo{
+.foo-logo {
     width: 20vw;
     margin-right: 8vw;
 }
-.social{
+.social {
     width: 40px;
     height: 40px;
     margin: 10px;
 }
-.social-icon1{
-    background-image: url(https://cdn-icons-png.flaticon.com/512/160/160168.png);
+.social-icon1 {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/160/160168.png");
     background-size: contain;
 }
-.social-icon1:hover{
-    background-image: url(https://cdn-icons-png.flaticon.com/512/2671/2671797.png);
+.social-icon1:hover {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/2671/2671797.png");
 }
-.social-icon2{
-    background-image: url(https://cdn-icons-png.flaticon.com/512/1236/1236842.png);
+.social-icon2 {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1236/1236842.png");
     background-size: contain;
 }
-.social-icon2:hover{
-    background-image: url(https://cdn-icons-png.flaticon.com/512/1997/1997928.png);
+.social-icon2:hover {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1997/1997928.png");
 }
-.social-icon3{
-    background-image: url(https://cdn-icons-png.flaticon.com/512/408/408809.png);
+.social-icon3 {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/408/408809.png");
     background-size: contain;
 }
-.social-icon3:hover{
-    background-image: url(https://cdn-icons-png.flaticon.com/512/8307/8307477.png);
+.social-icon3:hover {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/8307/8307477.png");
 }

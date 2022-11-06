@@ -5,40 +5,60 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <script src="./index.js" defer="defer"></script>
         <title>ALPHA LIMIT</title>
     </head>
     <body>
         <div class="container">
             <header class="head">
-                <img
-                    src="./logo/Alpha Limit Company, Logo.png"
-                    alt="alpha limit logo"
-                    class="logo">
+                <img src="./logo/AlphaLimitCompanyLogo.png" alt="alpha limit logo" class="logo">
+
                 <ul class="nav-list">
-                    <a href="#" class="link">
-                        <li class="nav-item">home</li>
-                    </a>
-                    <a href="#" class="link">
-                        <li class="nav-item">home</li>
-                    </a>
-                    <a href="#" class="link">
-                        <li class="nav-item">home</li>
-                    </a>
-                    <a href="#" class="link">
-                        <li class="nav-item">home</li>
-                    </a>
-                    <a href="#" class="link">
-                        <li class="nav-item">home</li>
-                    </a>
+
+                    <li class="nav-item home-item" id="home-item">
+                        <a href="#bkgrd-wrapper" class="link"><div class="home-icon item-icon" id="home-icon"></div>
+                            <span class="item-name">home</span></a>
+                    </li>
+
+                    <li class="nav-item about-item" id="about-item">
+                        <a href="#about" class="link"><div class="item-icon about-icon" id="about-icon"></div>
+                            <span class="item-name">about us</span></a>
+                    </li>
+
+                    <li class="nav-item projects-item" id="projects-item">
+                        <a href="#projects" class="link"><div class="projects-icon item-icon" id="projects-icon"></div>
+                            <span class="item-name">projects</span></a>
+                    </li>
+
+                    <li class="nav-item  products-item" id="products-item">
+                        <a href="#" class="link"><div class="products-icon item-icon" id="products-icon"></div>
+                            <span class="item-name">products</span></a>
+                    </li>
+                    <li class="nav-item catalog-item" id="catalog-item">
+                        <a href="#" class="link"><div class="catalog-icon item-icon" id="catalog-icon"></div>
+                            <span class="item-name">e-catalog</span></a>
+                    </li>
+
+                    <li class="nav-item contacts-item" id="contacts-item">
+                        <a href="#foo" class="link"><div class="contacts-icon item-icon" id="contacts-icon"></div>
+                            <span class="item-name">contact us</span></a>
+                    </li>
+
+                    <li class="nav-btn-el" id="nav-btn-el">
+                        <button class="menu" id="menu"><span class="burger"></span><span class="burger"></span><span class="burger"></span>
+                        </button>
+                        
+                    </li>
+
                 </ul>
             </header>
             <main class="main">
-                <div class="bkgrd-wrapper">
+                <div class="bkgrd-wrapper" id="bkgrd-wrapper">
                     <h1 class="title">alpha limit</h1>
                     <h3 class="description">Lorem ipsum, dolor sit amet consectetur adipisicing.</h3>
                 </div>
-                <div class="about">
+                <div class="about" id="about">
                     <h2 class="about-title">about us</h2>
                     <div class="about-body">
                         <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -53,7 +73,7 @@
                             alt="lamp with blue background">
                     </div>
                 </div>
-                <div class="projects">
+                <div class="projects" id="projects">
                     <h3 class="projects-title">our latest projects</h3>
                     <div class="projects-container" id="projects-container">
                         <div class="gallery">
@@ -62,48 +82,40 @@
                                 <div class="left-btn" id="left-btn">
                                     <img
                                         src="https://cdn-icons-png.flaticon.com/512/467/467274.png"
-                                        alt=""
+                                        alt="left button image"
                                         class="btn-icon"></div>
                                 <div class="imgs" id="mainImgWrapper">
-                                    <img src="" alt="gallery img" id="mainImg"></div>
+                                    <img src="#" alt="gallery img" id="mainImg"></div>
                                 <div class="right-btn" id="right-btn">
                                     <img
                                         src="https://cdn-icons-png.flaticon.com/512/467/467282.png"
-                                        alt=""
+                                        alt="right button image"
                                         class="btn-icon"></div>
                             </div>
                         </div>
                         <div class="text-wrapper">
-                            <h2 class="product-name" id="product-name"></h2>
-                            <p class="decription" id="product-decription"></p>
+                            <h2 class="product-name" id="product-name">test</h2>
+                            <p class="decription" id="product-decription">test</p>
                         </div>
                     </div>
                     <div class="footer-gallery" id="footer-gallery"></div>
                 </div>
             </main>
-            <footer class="foo">
+            <footer class="foo" id="foo">
                 <div class="foo-leftt">
                     <div class="contact">
-                        <a
-                            href="mailto:alkarim1310@gmail.com?"
-                            subject="hello world!!"
-                            target="_blank"
-                            class="contact-link">
+                        <a href="mailto:alkarim1310@gmail.com?" target="_blank" class="contact-link">
                             <div class="contact-icon contact-icon1"></div>
                         </a>
-                        <a
-                            href="mailto:alkarim1310@gmail.com?"
-                            subject="hello world!!"
-                            target="_blank"
-                            class="contact-link">
+                        <a href="mailto:alkarim1310@gmail.com?" target="_blank" class="contact-link">
                             <p class="contact-info">example@gmail.com</p>
                         </a>
                     </div>
                     <div class="contact">
-                        <a href="tell:+90 552 606 66 63" target="blank_" class="contact-link">
+                        <a href="tell:+905526066663" target="blank_" class="contact-link">
                             <div class="contact-icon contact-icon2"></div>
                         </a>
-                        <a href="tell:+90 552 606 66 63" target="blank_" class="contact-link">
+                        <a href="tell:+905526066663" target="blank_" class="contact-link">
                             <p class="contact-info">+90 552 606 66 63</p>
                         </a>
                     </div>
@@ -124,17 +136,17 @@
                     </div>
                 </div>
                 <div class="foo-mid">
-                    <a href="https:www.linkedin.com/" target="_blank" class="social-links">
+                    <a href="https://www.linkedin.com/" target="_blank" class="social-links">
                         <div class="social social-icon1"></div>
                     </a>
-                    <a href="https:www.facebook.com/" target="_blank" class="social-links">
+                    <a href="https://www.facebook.com/" target="_blank" class="social-links">
                         <div class="social social-icon2"></div>
                     </a>
-                    <a href="https:www.instagram.com/" target="_blank" class="social-links">
+                    <a href="https://www.instagram.com/" target="_blank" class="social-links">
                         <div class="social social-icon3"></div>
                     </a>
                 </div>
-                <div class="foo-right"><img class="foo-logo" src="./logo/Alpha Limit Company, Logo.png" alt=""></div>
+                <div class="foo-right"><img class="foo-logo" src="./logo/AlphaLimitCompanyLogo.png" alt=""></div>
             </footer>
         </div>
     </body>
