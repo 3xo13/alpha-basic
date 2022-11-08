@@ -2,16 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* overflow-x: hidden; */
+    
 }
 .container {
     width: 100vw;
-    height: 350vh;
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    
+    
 }
 .head {
     width: 100%;
@@ -211,7 +210,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    scroll-snap-align: end;
+    
 }
 .title {
     width: 100%;
@@ -239,23 +238,23 @@
 
 .about {
     width: 100vw;
-    height: 100vh;
-    background-image: linear-gradient(180deg , skyblue , rgb(179, 130, 37));
+    height: 200vh;
+    background-image: linear-gradient(180deg , rgb(193, 110, 15) , rgb(179, 130, 37),white);
     background-size: auto;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .about-title {
     width: 100vw;
-    height: 20%;
+    height: 20vh;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     font-size: 2rem;
     text-transform: capitalize;
-
 }
 .about-title::before {
     content: '';
@@ -280,29 +279,75 @@
 }
 .about-body {
     width: 100%;
-    height: 85%;
+    height: 85vh;
     display: flex;
     align-items: center;
     flex-direction: row;
-
+    text-align: center;
 }
 .about-img {
     margin-right: 10vw;
     width: 20vw;
-    border-radius: 15px;
+    
 
 }
 .about-text {
-    text-align: center;
-    color: rgb(59, 59, 59);
+    
+    color: rgb(229, 214, 205);
     font-size: 1.2rem;
     margin: 20px;
+}
+.about-second{
+    height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+    /* background-color: rgb(177, 143, 98); */
+    display: flex;
+    flex-direction: column;
+}
+.about-second-wrappers{
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.vision-text-wrapper , .mission-text-wrapper {
+    width: 40vw;
+    color: rgb(96, 64, 3);
+    text-align: center;
+}
+.mission-side-img{
+    width: 250px;
+    height: 300px;
+    background-image: url(https://images.unsplash.com/photo-1649478443254-b1a21cc9ed96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1034&q=80);
+    background-size: cover;
+    
+}
+.vision-side-img{
+    width: 250px;
+    height: 300px;
+    background-image: url(https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-size: cover;
 }
 
 
 
 /* projects gallery */
-
+.projects {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: static;
+}
+/* #projects{
+    width: 100vw;
+    height: 100vh;
+} */
 .projects-title {
     width: 100%;
     height: 15vh;
@@ -331,15 +376,7 @@
     position: relative;
     left: 10px;
 }
-.projects {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    scroll-snap-align: end;
-}
+
 .projects-container {
     width: 80vw;
     height: 60vh;
@@ -389,7 +426,7 @@
     margin: 10px;
 }
 .footer-gallery {
-    width: 90vw;
+    width: 100vw;
     height: 20vh;
     display: flex;
     justify-content: space-evenly;
@@ -415,11 +452,13 @@
 .foo {
     height: 50vh;
     width: 100vw;
-    background-color: antiquewhite;
+    background-image: linear-gradient(180deg , white , orange);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    scroll-snap-align: start;
+    position: relative;
+    top: 100vh;
+    
 }
 .foo-left,
 .foo-mid,
@@ -510,13 +549,16 @@
         transition-duration: 500ms;
     }
 }
-@media (max-width: 330px){
+@media (max-width: 400px){
     .container{
+        height: fit-content;
+    }
+    .about{
         height: fit-content;
     }
     .about-body{
         flex-direction: column;
-        
+        height: fit-content;
     }
     .about-img{
         width: 50%;
@@ -524,6 +566,29 @@
         margin: 0 0 10px 0;
         object-fit: cover;
     }
+    .about-second{
+        height: fit-content;
+        align-items: center;
+    }
+    .about-second-wrappers{
+        height: fit-content;
+        flex-direction: column;
+        width: 100vw;
+        margin: 20px;
+    }
+    .mission-side-img{
+        width: 40vw;
+        min-width: 40vw;
+        height: 60vw;
+        min-height: 60vw;
+    }
+    .vision-side-img{
+        width: 40vw;
+        min-width: 40vw;
+        height: 60vw;
+        min-height: 60vw;
+    }
+
     .projects-container{
         width: 100vw;
         height: 150vh;
@@ -559,6 +624,8 @@
         background-image: url(./logo/AlphaLimitCompanyLogo.png);
         background-size: cover;
         align-items: flex-start;
+        top: 240vh;
+
         
     }
     .foo-mid{
