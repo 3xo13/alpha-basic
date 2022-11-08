@@ -344,7 +344,7 @@
 
 /* partners */
 
-.partners{
+.partners {
     height: 350px;
     width: 100vw;
     display: flex;
@@ -398,7 +398,75 @@
     
 }
 
+/* projects */
 
+.projects {
+    height: 450px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(200, 137, 20);
+    
+}
+.projects-title {
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+.projects-title::before {
+    content: '';
+    width: 25vw;
+    height: 2px;
+    border-bottom: 2px solid rgb(200, 137, 20);
+    border-top: 2px solid rgb(200, 137, 20);
+    position: relative;
+    right: 10px;
+    right: 10px;
+
+}
+.projects-title::after {
+    content: '';
+    width: 25vw;
+    height: 2px;
+    border-bottom: 2px solid rgb(200, 137, 20);
+    border-top: 2px solid rgb(200, 137, 20);
+    position: relative;
+    left: 10px;
+    left: 10px;
+}
+.projects-slider{
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+.projects-card{
+    width: 250px;
+    height: 250px;
+    margin: 5px 10px;
+}
+.projects-name{
+    width: max-content;
+    padding: 2px;
+    position: relative;
+    bottom: 100px;
+    color: rgb(13, 6, 0);
+    margin: 10px;
+    box-shadow: inset 5px 5px 20px rgb(255, 255, 255);    
+}
+.projects-img{
+    width: 250px;
+    height: 250px;
+    
+    
+}
 
 /* footer */
 
@@ -504,7 +572,7 @@
         transition-duration: 500ms;
     }
 }
-@media (max-width: 400px){
+@media (max-width: 481px){
     .container{
         height: fit-content;
     }
@@ -543,10 +611,12 @@
         height: 60vw;
         min-height: 60vw;
     }
-    .partners-title::before ,  .partners-title::after{
+    .partners-title::before ,  .partners-title::after , .projects-title::after , .projects-title::after{
         width: 50px;
     }
-  
+    .projects-title{
+        margin-top: 30px;
+    }
     .foo-right{
         display: none;
 
@@ -555,6 +625,7 @@
         background-image: url(./logo/AlphaLimitCompanyLogo.png);
         background-size: cover;
         align-items: flex-start;
+        margin-top: 30px;
     }
     .foo-mid{
         justify-content: flex-start;
