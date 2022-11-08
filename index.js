@@ -1,3 +1,43 @@
+const slider = document.getElementById('partners-slider');
+
+const partnersImgs = ["./alpha-photos/partners/amaron.png",
+"./alpha-photos/partners/cummins.png" ,
+"./alpha-photos/partners/dossan.jpg" ,
+"./alpha-photos/partners/emg.jpg" ,
+"./alpha-photos/partners/etw.png" ,
+"./alpha-photos/partners/federal.png" ,
+"./alpha-photos/partners/kingsmill.png",
+"./alpha-photos/partners/lucyElectric.jpg",
+"./alpha-photos/partners/perkins.png" ,
+"./alpha-photos/partners/raychem.png" ,
+"./alpha-photos/partners/sfim.jpg" ,
+"./alpha-photos/partners/tec.png" ,
+"./alpha-photos/partners/tescom.png" ,
+"./alpha-photos/partners/tosmac.png" ,
+"./alpha-photos/partners/ultralight.jpg",
+"./alpha-photos/partners/wxide.png" ,
+"./alpha-photos/partners/yamuna.jpg" ];
+
+const htmlImgs = partnersImgs.map(link => {
+    let img = document.createElement('img');
+    img.src = link;
+    img.alt = 'partners logo';
+    img.className = 'partners-img'
+    return img;
+})
+slider.append(...htmlImgs)
+console.log(htmlImgs)
+
+const slide = ()=>{
+    
+    let leftImg = htmlImgs.shift();
+    htmlImgs.push(leftImg)
+    slider.append(...htmlImgs)
+   setTimeout(()=>{slide()},2000)
+}
+slide()
+
+
 
 // const imgsLinks = [
 //     {

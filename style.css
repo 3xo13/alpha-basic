@@ -194,7 +194,7 @@
 /* main */
 .main {
     width: 100vw;
-    height: 300vh;
+    height: fit-content;
 
 }
 
@@ -217,6 +217,7 @@
     height: auto;
     text-align: center;
     font-size: 5rem;
+    
     color: rgb(222, 199, 165);
     text-shadow: 5px 8px 5px gray;
     text-transform: capitalize;
@@ -226,7 +227,7 @@
 }
 .description {
     color: rgb(142, 119, 77);
-    font-size: 6vw;
+    font-size: 2.5rem;
     width: 100%;
     height: 25%;
     text-align: center;
@@ -239,9 +240,8 @@
 .about {
     width: 100vw;
     height: 200vh;
-    background-image: linear-gradient(180deg , rgb(193, 110, 15) , rgb(179, 130, 37),white);
+    background-image: linear-gradient(180deg , rgb(181, 127, 65) , rgb(179, 130, 37),white);
     background-size: auto;
-    /* background-attachment: fixed; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -255,15 +255,16 @@
     justify-content: center;
     font-size: 2rem;
     text-transform: capitalize;
+    color: rgb(86, 57, 4);
 }
 .about-title::before {
     content: '';
     width: 25vw;
     height: 2px;
-    border-bottom: 2px solid black;
-    border-top: 2px solid black;
+    border-bottom: 2px solid rgb(86, 57, 4);
+    border-top: 2px solid rgb(86, 57, 4);
     position: relative;
-    bottom: 10px;
+    right: 10px;
     right: 10px;
 
 }
@@ -271,10 +272,10 @@
     content: '';
     width: 25vw;
     height: 2px;
-    border-bottom: 2px solid black;
-    border-top: 2px solid black;
+    border-bottom: 2px solid rgb(86, 57, 4);
+    border-top: 2px solid rgb(86, 57, 4);
     position: relative;
-    bottom: 10px;
+    left: 10px;
     left: 10px;
 }
 .about-body {
@@ -292,8 +293,7 @@
 
 }
 .about-text {
-    
-    color: rgb(229, 214, 205);
+    color: rgb(86, 57, 4);
     font-size: 1.2rem;
     margin: 20px;
 }
@@ -315,8 +315,18 @@
 }
 .vision-text-wrapper , .mission-text-wrapper {
     width: 40vw;
-    color: rgb(96, 64, 3);
     text-align: center;
+}
+.mission-title , .vision-title{
+    font-size: 1.7rem;
+    margin: 10px;
+    color: rgb(86, 57, 4);
+}
+
+.mission-text, .vision-text{
+    font-size: large;
+    color: rgb(116, 83, 20);
+    margin-bottom: 10px;
 }
 .mission-side-img{
     width: 250px;
@@ -332,120 +342,63 @@
     background-size: cover;
 }
 
+/* partners */
 
-
-/* projects gallery */
-.projects {
+.partners{
+    height: 350px;
     width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    position: static;
+    color: rgb(200, 137, 20);
+    
 }
-/* #projects{
-    width: 100vw;
-    height: 100vh;
-} */
-.projects-title {
-    width: 100%;
-    height: 15vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    color: rgb(212, 144, 17);
-}
-.projects-title::before {
-    content: '';
-    width: 25vw;
-    height: 2px;
-    border-top: 2px solid rgb(193, 123, 32);
-    border-bottom: 2px solid rgb(193, 123, 32);
-    position: relative;
-    right: 10px;
-}
-.projects-title::after {
-    content: '';
-    width: 25vw;
-    height: 3px;
-    border-top: 2px solid rgb(193, 123, 32);
-    border-bottom: 2px solid rgb(193, 123, 32);
-    position: relative;
-    left: 10px;
-}
-
-.projects-container {
-    width: 80vw;
-    height: 60vh;
-    display: flex;
-    flex-direction: row;
-
-}
-.projects-wrapper {
-    width: 380px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0;
-    background-color: black;
-}
-.left-btn,
-.right-btn {
-    width: 20px;
-    height: 50px;
-    /* background-color: white; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-.left-btn:hover,
-.right-btn:hover {
-    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-}
-.imgs {
-    height: 90%;
-    width: 100%;
-    margin: 0;
-    color: white;
-}
-#mainImg {
-    width: 100%;
-    height: 100%;
-}
-.product-name {
-    width: 100%;
-    font-size: 2rem;
-    margin: 10px;
-}
-.decription {
-    font-size: 1.2rem;
-    margin: 10px;
-}
-.footer-gallery {
+.partners-title {
     width: 100vw;
     height: 20vh;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    gap: 10px;
-    overflow: hidden;
-    margin-top: 10px;
+    justify-content: center;
+    font-size: 2rem;
+    text-transform: capitalize;
 }
-.footer-img {
-    height: 100%;
-    width: 100px;
-    object-fit: cover;
-    border-radius: 10px;
-    /* border: 1px solid black; */
-}
-.btn-icon {
-    width: 25px;
+.partners-title::before {
+    content: '';
+    width: 25vw;
+    height: 2px;
+    border-bottom: 2px solid rgb(200, 137, 20);
+    border-top: 2px solid rgb(200, 137, 20);
+    position: relative;
+    right: 10px;
+    right: 10px;
 
 }
+.partners-title::after {
+    content: '';
+    width: 25vw;
+    height: 2px;
+    border-bottom: 2px solid rgb(200, 137, 20);
+    border-top: 2px solid rgb(200, 137, 20);
+    position: relative;
+    left: 10px;
+    left: 10px;
+}
+.partners-slider{
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+.partners-img{
+    width: 200px;
+    height: 150px;
+    margin: 5px 10px;
+    
+}
+
+
 
 /* footer */
 
@@ -456,8 +409,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
-    top: 100vh;
+    /* position: relative;
+    top: 100vh; */
     
 }
 .foo-left,
@@ -543,6 +496,8 @@
 }
 
 
+/* styles on diffrent screen sizes */
+
 @media (max-width: 1000px) {
     .about-img {
         width: 35vw;
@@ -588,34 +543,10 @@
         height: 60vw;
         min-height: 60vw;
     }
-
-    .projects-container{
-        width: 100vw;
-        height: 150vh;
-        flex-direction: column;
+    .partners-title::before ,  .partners-title::after{
+        width: 50px;
     }
-    .projects-title{
-        height: 25vh;
-    }
-    .projects-title::after{
-        width: 10vw;
-    }
-    .projects-title::before{
-        width: 10vw;
-    }
-    .projects-wrapper{
-        width: 100vw;
-        min-width: 100vw;
-        height: 50vh;
-        min-height: 50vh;
-    }
-    .left-btn , .right-btn{
-        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-    }
-    .footer-gallery{
-        height: 35vh;
-        margin-bottom: 20px;
-    }
+  
     .foo-right{
         display: none;
 
@@ -624,9 +555,6 @@
         background-image: url(./logo/AlphaLimitCompanyLogo.png);
         background-size: cover;
         align-items: flex-start;
-        top: 240vh;
-
-        
     }
     .foo-mid{
         justify-content: flex-start;
