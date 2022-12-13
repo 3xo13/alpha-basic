@@ -1,3 +1,5 @@
+
+
 const slider = document.getElementById('partners-slider');
 const projectSlider = document.getElementById('projects-slider');
 
@@ -49,7 +51,7 @@ const htmlImgs = partnersImgs.map(link => {
     return img;
 })
 slider.append(...htmlImgs)
-console.log(htmlImgs)
+//console.log(htmlImgs)
 
 const slide = ()=>{
     
@@ -196,3 +198,47 @@ $(document).ready(function(){
     })
   
   }); 
+
+const submit = document.querySelector('#submit');
+const custumerName = document.querySelector('#name');
+const phoneNumber = document.querySelector('#phone');
+const email = document.querySelector('#email');
+const subject = document.querySelector('#subject');
+
+let message = {
+    custumer: '',
+    phone: '',
+    subject: ''
+};
+
+function emailWriter (){
+    console.log(arguments)
+}
+
+
+custumerName.addEventListener('keyup',(e)=>{
+    //console.log(e.target.value)
+    message.custumer = e.target.value;
+})
+phoneNumber.addEventListener('keyup',(e)=>{
+    //console.log(e.target.value)
+    message.phone = e.target.value;
+})
+email.addEventListener('keyup',(e)=>{
+    //console.log(e.target.value)
+    message.email = e.target.value;
+})
+subject.addEventListener('keyup',(e)=>{
+    //console.log(e.target.value)
+    message.subject = e.target.value;
+})
+
+
+const linkSubmit = document.querySelector('#link-submit');
+
+
+
+//   submit.addEventListener('click',(e)=>{
+//     linkSubmit.href = `mailto:${message.email}`;
+    
+//   })

@@ -202,7 +202,29 @@
     /* background-color: antiquewhite; */
     margin: 20px 0;
 }
+.big-gallery{
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.big-img{
+    width: 40vw;
+    height: 40vh;
+    object-fit: contain;
+}
+.big-name{
+    font-size: 2rem;
 
+}
+.big-text-wrapper{
+    width: 40vw;
+}
+.big-text{
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
 .card{
     height: 190px;
     width: 140px;
@@ -218,6 +240,20 @@
     border-radius: 10px;
     padding: 5px;
 }
+/* .card:hover{
+    position: absolute;
+    width: 20vw;
+    height: 30vw;
+    
+}
+.card:hover h3{
+    font-size: 25px;
+    margin: 0 10px;
+}
+.card:hover p{
+    font-size: 25px;
+    margin: 10px;
+} */
 .left{
     width: 20px;
     height: 25px;

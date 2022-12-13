@@ -3,38 +3,38 @@ const leftBtn = document.querySelectorAll('.left');
 const rightBtn = document.querySelectorAll('.right');
 
 let data = [
-[['./alpha-photos\P.07 Earthing & Lightening Protection\pictures\Air terminal, multipoints, lightning protection Kingsmill supplier in riyadh - Saudi arabia.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-],[['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-],[['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-],[['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
-['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','description some random text for testing'],
+[['./alpha-photos\P.07 Earthing & Lightening Protection\pictures\Air terminal, multipoints, lightning protection Kingsmill supplier in riyadh - Saudi arabia.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['.\alpha-photos\DistributionEquipmentPowerProtection\Logo brand\ABBElectric supplier in riyadh Saudi Arabia Supplier.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+],[['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+],[['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','hi','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+],[['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','bye','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
+['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
 ],[['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
 ['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
 ['./alpha-photos/DistributionEquipmentPowerProtection/pictures/5.jpg','Name','description some random text for testing'],
@@ -101,31 +101,41 @@ const galleryBuilder = () => {
 }
 galleryBuilder()
 
-rightBtn.forEach(btn => {
-    btn.addEventListener('click',(e)=>{
-        console.log()
+
+
+
+gallerys.forEach(el => {
+    el.addEventListener('click',(e)=>{
+        // let id = e.target.parentNode.id;
+        // console.log(e.target.classList[0]);
+        bigImage(e)
+
     })
 })
+  
 
-// const galleryBuilder = (product,el) => {
-//     let card = document.createElement('div');
-//     card.className = 'card';
-//     card.style.backgroundImage = `url(${product[0]}`;
-//     let name = document.createElement('h3');
-//     name.className = 'name';
-//     name.innerHTML = '<h1>hello world</h1>';
-//     let description = document.createElement('p');
-//     description.className = 'description';
-//     description.innerText = product[2];
-//     card.append(name,description);
-//     el.append(card);
-//     return el;
-// } 
 
-// let cards = gallerys.forEach(el => {
-//     data.forEach(product => {
-//         galleryBuilder(product,el);
-//         return el
-//     })
-//     return el;
-// })
+// big gallery section
+
+const bigGalleryImg = document.querySelector('#big-img');
+const bigName = document.querySelector('#big-name');
+const bigText = document.querySelector('#big-text');
+
+const bigImage = (e) => {
+    if(e.target.classList[0] == 'card'){
+        let url = e.target.style.backgroundImage.split('');
+    url.splice(0,6);
+    url.splice(url.length - 2)
+    bigGalleryImg.src = url.join('');
+
+    let name = e.target.firstElementChild.innerHTML;
+    bigName.innerHTML = name;
+
+    let text = e.target.children[1].innerHTML;
+    bigText.innerHTML = text;
+   console.log(e.target.parentNode.id -1)
+    }
+    
+}
+    
+console.log(rightBtn[0])

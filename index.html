@@ -5,10 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style.css">
-
+        <!-- <script src="https://smtpjs.com/v3/smtp.js"> </script> -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <script src="./index.js" defer="defer"></script>
         <title>ALPHA LIMIT</title>
+
     </head>
     <body>
         <div class="container">
@@ -118,14 +119,11 @@
                 </div>
                 <div class="partners" id="partners">
                     <h2 class="partners-title">our partners</h2>
-                    <figure class="partners-slider" id="partners-slider">
-                    </figure>
+                    <figure class="partners-slider" id="partners-slider"></figure>
                 </div>
                 <div class="projects" id="projects">
                     <h2 class="projects-title">our projects</h2>
-                    <figure class="projects-slider" id="projects-slider">
-      
-                    </figure>
+                    <figure class="projects-slider" id="projects-slider"></figure>
                 </div>
             </main>
             <footer class="foo" id="foo">
@@ -175,8 +173,34 @@
                 </div>
                 <div class="foo-right"><img class="foo-logo" src="./logo/AlphaLimitCompanyLogo.png" alt=""></div>
             </footer>
-            
+
         </div>
-       <a href="#bkgrd-wrapper" class="up"><button class="backToTop hidden" ><section class="upBtn"></section></button></a> 
+        <a href="#bkgrd-wrapper" class="up">
+            <button class="backToTop hidden">
+                <section class="upBtn"></section>
+            </button>
+        </a>
+        <div class="quote-container">
+            <form class="form">
+                <label for="name" class="input-label">name:</label><br>
+                <input type="text" id="name" name="name" class="input-field"><br>
+
+                <label for="phone" class="input-label">phone number:</label><br>
+                <input type="tel" name="phone" id="phone" class="input-field"><br>
+                
+                <label for="email" class="input-label">e-mail</label><br>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="input-field"
+                    required="required"><br>
+                
+                    <label for="subject" class="input-label">subject:</label><br>
+                <textarea name="subject" id="subject"  cols="30" rows="10"></textarea><br>
+                <a href="#" id="link-submit"><button id="submit" class="submit-btn">submit</button></a>
+            </form>
+        </div>
+
     </body>
 </html>
