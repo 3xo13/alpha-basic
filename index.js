@@ -43,6 +43,8 @@ const projects = [["./alpha-photos/projects/AlQwaiyaMall.jpg",'AlQwaiya Mall'],
 ["./alpha-photos/projects/UniversityBoulevard.jpg","University Boulevard"],
 ["./alpha-photos/projects/parking/parkingLotAbove.png.jpg","parking Lot"]]
 
+
+// creat html images for the slider
 const htmlImgs = partnersImgs.map(link => {
     let img = document.createElement('img');
     img.src = link;
@@ -50,17 +52,28 @@ const htmlImgs = partnersImgs.map(link => {
     img.className = 'partners-img'
     return img;
 })
+// adding images to the page
 slider.append(...htmlImgs)
 //console.log(htmlImgs)
 
-const slide = ()=>{
+
+//slide motion 'snap shift'
+// const slide = ()=>{
     
-    let leftImg = htmlImgs.shift();
-    htmlImgs.push(leftImg)
-    slider.append(...htmlImgs)
-   setTimeout(()=>{slide()},2000)
-}
-slide()
+//     let leftImg = htmlImgs.pop();
+//     htmlImgs.unshift(leftImg)
+//     slider.append(...htmlImgs)
+//    setTimeout(()=>{slide()},2000)
+// }
+// slide()
+
+// let partnersImages = document.querySelectorAll('.partners-img');
+
+// setInterval(()=>{
+//    let last = slider.children[slider.children.length -1];
+//    slider.replaceChild(slider.children[0],last)
+// },2000)
+
 
 
 
@@ -90,16 +103,17 @@ const projectSlide = ()=>{
 }
 projectSlide()
 
-const backUp = document.querySelector('.backToTop');
 
-const showOnPx = 200;
+// back to top button
+const backUp = document.querySelector('.backToTop');
 
 
 const scrollContainer = () => {
   return document.documentElement || document.body;
 };
-
+// show or hide ( back to top ) button on scroling 
 document.addEventListener("scroll", () => {
+    const showOnPx = 200;
   if (scrollContainer().scrollTop > showOnPx) {
     backUp.classList.remove("hidden")
   } else {
@@ -113,6 +127,7 @@ $(document).ready(function(){
     let menuState = false;
     $('#menu').click(()=>{
         menuState = !menuState;
+        // animate menu elements when the btn is active
         if(menuState){
         $('#home-item').animate({
             right: 90,
@@ -139,6 +154,7 @@ $(document).ready(function(){
             top: 65
         });
         }
+        // animate menu elements when the btn is inactive
         if(!menuState){
             $('#home-item').animate({
                 right: 0,
@@ -167,6 +183,7 @@ $(document).ready(function(){
         }
         
     })
+    // animate menu items back when one of them is clicked
     $('.nav-item').click(()=>{
         if(menuState){
             menuState = !menuState;
@@ -195,7 +212,16 @@ $(document).ready(function(){
                 top: 45
             });  
         }
-    })
+    });
+
+//    const partnersSlider = () => {
+
+//     $('.partners-img').animate({
+//         left: '200px'
+//    },500)
+    
+//    }
+    
   
   }); 
 

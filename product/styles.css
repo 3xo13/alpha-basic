@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: initial;
+}
+
+.head {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    /* position: absolute; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    width: 130px;
+    margin: 10px 0 10px 20px;
+    height: fit-content;
+}
+.nav-list {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+
+}
+.nav-item {
+    width: fit-content;
+    height: 60px;
+    /* border: 2px solid black; */
+    margin: 0 15px;
+    border-radius: 50px;
+    background-color: transparent;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(143, 96, 9);
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    text-shadow: 3px 3px 3px rgb(158, 155, 155);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+    
+}
+.link:hover {
+    color: rgb(84, 58, 10);
+}
+
+.item-icon {
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    min-height: 50px;
+    margin: 5px 10px 5px 5px;
+    border-radius: 50%;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-color: rgb(204, 162, 84); */
+}
+.item-name {
+    font-size: 1.5rem;
+    margin: 0 10px 0 0;
+}
+.item-name:hover{
+    font-size: 1.8rem;
+}
+.home-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/2413/2413074.png");
+}
+.home-item:hover .home-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1018/1018573.png");
+}
+.about-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/7772/7772499.png");
+}
+.about-item:hover .about-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/7610/7610960.png");
+}
+.projects-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/2532/2532924.png");
+}
+.projects-item:hover .projects-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/3187/3187308.png");
+}
+.products-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/679/679720.png");
+}
+.products-item:hover .products-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1045/1045018.png");
+}
+.catalog-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/2557/2557521.png");
+    background-size: 35px;
+}
+.catalog-item:hover .catalog-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/3456/3456391.png");
+}
+.contacts-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/2967/2967883.png");
+    background-size: 35px;
+}
+.contacts-item:hover .contacts-icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/2343/2343723.png");
+}
+.nav-btn-el{
+    position: absolute;
+    display: none;
+}
+.menu{
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    min-height: 50px;
+    margin: 5px 10px 5px 5px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    /* background-color: rgb(239, 198, 124); */
+}
+.burger{
+    border-radius: 3px;
+    height: 5px;
+    border: 2px solid orange;
+    margin: 2px;
+}
+.burger1{
+    width: 10px;
+    transform: translate(-10px);
+}
+.burger2{
+    width: 20px;
+    transform: translate(-10px);
+}
+.burger3{
+    width: 30px;
+    transform: translate(-10px);
+}
+.menu:hover .burger1{
+    background-color: orange;
+    border-color: orange;
+}
+.menu:hover .burger2{
+    background-color: orange;
+    border-color: orange;
+}
+.menu:hover .burger3{
+    background-color: orange;
+    border-color: orange;
+}
+@media (max-width: 1200px){
+    .item-name{
+        display: none;
+    }
+    .nav-item{
+        box-shadow: none;
+        margin: 0px;
+    }
+    
+}
+@media (max-width: 600px){
+    .item-name{
+        display: none;
+    }
+    .nav-item{
+        position: absolute;
+        right: 0px;
+    }
+    .nav-btn-el{
+        display: initial;
+        z-index: 1;
+        
+    }
+    
+}
+
+/* main content */
+
+main{
+    height: fit-content;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.row{
+    width: 350px;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+.product-section{
+    width: 300px;
+    min-width: 300px;
+    height: 250px;
+    background-color: antiquewhite;
+    /* border: 1px solid black; */
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    background-image: url('https://images.unsplash.com/photo-1661956600684-97d3a4320e45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=800');
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.section-title{
+    width: 85%;
+    height: 40%;
+    box-shadow: 10px 10px 10px 50px  rgb(185, 122, 34) inset;
+    background-color: transparent;
+    position: relative;
+    top: 70%;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 5px black;
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery-section{
+    width: 100vw;
+    height: 35vh;
+    margin: 12px 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: none;
+}
+
+.product{
+    width: 130px;
+    min-width: 130px;
+    height: 200px;
+    background-image: url('https://images.unsplash.com/photo-1661956600684-97d3a4320e45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    /* box-shadow: inset 0 0 2000px rgba(132, 132, 132, 0.5); */
+    box-shadow: 0 -40px 20px inset rgb(50, 50, 50);
+    margin: 0 10px;
+    border-radius: 15px;
+    background-position: center;
+    background-size: cover;
+    display: none;
+    
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.product-title{
+    color: white;
+    margin: 15px;
+    font-size: medium;
+    text-transform: capitalize;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+/* .slide-left, .slide-right{
+    height: 35vh;
+    width: 50vw;
+    background-color: rgb(202, 154, 95);
+    position: relative;
+    transform: skewX(45deg);
+    display: none;
+} */
