@@ -1,7 +1,9 @@
 
 
-const slider = document.getElementById('partners-slider');
-const projectSlider = document.getElementById('projects-slider');
+const slider = document.querySelector('#partners-slider');
+const sliderReplica = document.querySelector('#partners-slider-replica');
+const projectSlider = document.querySelector('#projects-slider');
+const replica = document.querySelector('#projects-slider-replica');
 
 const partnersImgs = ["./alpha-photos/partners/amaron.png",
 "./alpha-photos/partners/cummins.png" ,
@@ -44,40 +46,25 @@ const projects = [["./alpha-photos/projects/AlQwaiyaMall.jpg",'AlQwaiya Mall'],
 ["./alpha-photos/projects/parking/parkingLotAbove.png.jpg","parking Lot"]]
 
 
-// creat html images for the slider
-const htmlImgs = partnersImgs.map(link => {
+// create html images for the slider
+const partnersImages = () => {
+    const htmlImgs = partnersImgs.map(link => {
     let img = document.createElement('img');
     img.src = link;
     img.alt = 'partners logo';
     img.className = 'partners-img'
     return img;
 })
+    return htmlImgs;
+}
 // adding images to the page
-slider.append(...htmlImgs)
-//console.log(htmlImgs)
+slider.append(...partnersImages());
+sliderReplica.append(...partnersImages());
 
+// create the images for the projects section
 
-//slide motion 'snap shift'
-// const slide = ()=>{
-    
-//     let leftImg = htmlImgs.pop();
-//     htmlImgs.unshift(leftImg)
-//     slider.append(...htmlImgs)
-//    setTimeout(()=>{slide()},2000)
-// }
-// slide()
-
-// let partnersImages = document.querySelectorAll('.partners-img');
-
-// setInterval(()=>{
-//    let last = slider.children[slider.children.length -1];
-//    slider.replaceChild(slider.children[0],last)
-// },2000)
-
-
-
-
-const projectImgs = projects.map(link => {
+const imgsMaker = () => {
+const arr = projects.map(link => {
     let card = document.createElement('div');
     let name = document.createElement('h3');
     let description = document.createElement('p');
@@ -93,15 +80,11 @@ const projectImgs = projects.map(link => {
     card.append(name)
     return card;
 })
-projectSlider.append(...projectImgs)
-const projectSlide = ()=>{
-    
-    let leftImg = projectImgs.pop();
-    projectImgs.unshift(leftImg)
-    projectSlider.append(...projectImgs)
-   setTimeout(()=>{projectSlide()},4000)
+return arr;
 }
-projectSlide()
+
+projectSlider.append(...imgsMaker());
+replica.append(...imgsMaker());
 
 
 // back to top button
@@ -262,7 +245,19 @@ subject.addEventListener('keyup',(e)=>{
 
 const linkSubmit = document.querySelector('#link-submit');
 
+// read more button 
 
+const about = document.querySelector('.about');
+const aboutSecondSection = document.querySelector('.about-second');
+const readMoreBtn = document.querySelector('.read-more')
+let readMoreState = false;
+const readMore = () => {
+    readMoreState = !readMoreState;
+    readMoreBtn.innerText = readMoreState ? 'Read less ...' : 'Read more ...';
+    about.style.height = readMoreState ? '200vh' : '100vh';
+    $(aboutSecondSection).toggle()
+    console.log(about,aboutSecondSection)
+}
 
 //   submit.addEventListener('click',(e)=>{
 //     linkSubmit.href = `mailto:${message.email}`;
